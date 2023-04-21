@@ -10,6 +10,10 @@ de uma API dotnet para uma página html com script em javascript puro (sem utili
 Clone o repositório e execute o arquivo **`run.bat`** que está dentro da pasta `Static`.
 O script irá compilar a API em dotnet, executar um servidor Node.js que proverá a página `index.html`.
 
+## Requisitos:
+- Node.js
+- Dotnet (ASP.NET Core Runtime)
+
 ## Detalhes:
 - A API está sendo executada em https://localhost:5001.
 - O frontend (página `index.htm`") está sendo servido através do endereço http://localhost:6001.
