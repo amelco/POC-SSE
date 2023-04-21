@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Server-Sent Events Example</title>
+</head>
+<body>
+    <h1>Server-Sent Events Example</h1>
+    <div id="event-container">a</div>
+    <span id="number">b</span>
+
+    <script>
+      const eventSource = new EventSource('https://localhost:5001/atualizaCasos');
+      const eventContainer = document.getElementById('event-container');
+
+      eventSource.addEventListener('random', (event) => {
+        const eventData = JSON.parse(event.data);
+        const eventHtml = `<p><strong>${eventData.type}</strong>: ${eventData.data}</p>`;
+        eventContainer.insertAdjacentHTML('beforeend', eventHtml);
+        document.getElementById('number').textContent = event.data;
+        console.log(event.data);
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>POC-SSE</h2>
+Numero aleatorio enviado do servidor:
+<b id="result"></b>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("https://localhost:5001/atualizaCasos");
+
+  source.addEventListener("NomeEvento", (event) => {
+    console.log(event.data);
+    document.getElementById("result").innerHTML = event.data + "<br>";
+  });
+
+  source.onmessage = (event) => {
+    console.log("recebeu");
+  };
+
+  source.onerror = (event) => {
+    console.log("erro");
+  };
+
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+</body>
+</html>
