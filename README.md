@@ -7,7 +7,7 @@ Uma prova de conceito (POC) para demostrar e testar o uso de (*Server-Sent Event
 de uma API dotnet para uma página html com script em javascript puro (sem utilizar framework).
 
 ## Uso:
-Clone o repositório e execute o arquivo **`run.bat`** que está dentro da pasta `Static`.
+Clone o repositório e execute o arquivo **`run.bat`** que está na pasta `POC-SSE/Static`.
 O script irá compilar a API em dotnet, executar um servidor Node.js que proverá a página `index.html`.
 
 ## Requisitos:
