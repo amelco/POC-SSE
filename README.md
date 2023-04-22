@@ -8,7 +8,7 @@ de uma API dotnet para uma página html com script em javascript puro (sem utili
 
 ## Uso:
 Clone o repositório e execute o arquivo **`run.bat`** que está na pasta `POC-SSE/Static`.
-O script irá compilar a API em dotnet, executar um servidor Node.js que proverá a página `index.html`.
+O script irá compilar a API em dotnet, executar a API e executar um servidor Node.js que proverá a página `index.html`.
 
 ## Requisitos:
 - Node.js
